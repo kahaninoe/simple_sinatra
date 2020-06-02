@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Change Me!</title>
+    <title>Emily's Favorite Characters</title>
   </head>
 
-  <body>
+  <body text=<%=@character.color%>>
     <main>
-      <h1><%= @character.name %></h1>
-      <p><%= @character.favorite_quote %></p>
+      <h1>
+        <%= @character.name %>
+      </h1>
+      <p style="font-family:optima,garamond,cambria;font-size:20px;">
+
+        <!--<img src=<%= @character.image %> alt="Image of Hobbes">-->
+
+        <b>Favorite quote: </b><%= "\"#{@character.favorite_quote}\"" %>
+        <br><br><b>Series: </b><%= "#{@character.books}" %>
+        <br><br><b>Personal traits: </b><%= "#{@character.traits}" %>
+        <br><br><b>Skills: </b><%= "#{@character.skills}" %>
+      </p>
     </main>
   </body>
 </html>
